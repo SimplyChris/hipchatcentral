@@ -1,0 +1,51 @@
+﻿@model HipChatCentral.Domain.Models.ViewModels.RegistrationViewModel
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <p>
+            <title>Sign Up For HipChat Central</title>            
+        </p>
+    </head>
+    <body>
+        <div>            
+            @using (Html.BeginForm("Create", "Registration", FormMethod.Post, new {@class="form-horizontal"}))
+            {                                                
+                <fieldset>
+                    <div id="legend">
+                        <legend class="">Register For A New HipChat Central Account</legend>
+                    </div>
+                    <div class="control-group">                        
+                        <label class="control-label">Desired Username</label>
+                        <div class="controls">                            
+                            @Html.TextBoxFor(x => x.UserName)
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Password To Use</label>
+                        <div class="controls">                                                        
+                            @Html.TextBoxFor(x=>x.Password, new {type="password"})
+                        </div>
+                        @Html.ValidationMessageFor(x=>x.Password)
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Re-Enter Password</label>
+                        <div class="controls">                            
+                            @Html.TextBoxFor(x=>x.PasswordReEntry, new {type="password"})
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="submit" value="Register" class="btn btn-primary"/>                            
+                        </div>
+                    </div>
+                </fieldset>
+            }          
+        </div>
+    </body>
+</html>

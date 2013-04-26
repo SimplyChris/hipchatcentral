@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "HipChatCentral Control Page";            
+}
+
+@using HipChatCentral.Domain.Models.ViewModels
+@model GroupAccountsViewModel
+       
+
+<!DOCTYPE html>
+
+<html>
+    <head>        
+        <h1 class="">HipChat Group Accounts</h1>
+    </head>
+    <body>
+        <div class="spa">            
+            <table class="table">                
+                <thead>
+                    <tr>
+                        <th>HipChat Group Name</th>
+                        <th># of Portal Users</th>
+                        <th># of Api Keys</th>
+                        <th>Edit Account</th>
+                        <th>Remove</th>                    
+                    </tr>
+                </thead>    
+                <tbody>
+                    @foreach (var group in Model.GroupAccounts) 
+                    {
+                        <tr>
+                            <td>@group.GroupName</td>
+                            <td>0</td>
+                            <td>@group.ApiKeys.Count</td>
+                            <td>@Html.ActionLink("Edit", "Edit", "Admin", new {group.Id}, new{@class = "btn"} )</td>                            
+                            <td>@Html.ActionLink("Delete","Delete","Admin",new{id=group.Id,registrationId = group.RegistrationId}, new{@class="btn-small btn-danger"})</td>
+                        </tr>
+                    }
+                </tbody>
+            </table> 
+            @Html.ActionLink("Add Group", "Create", "Admin", new { Model.RegistrationId }, new { @class = "btn" })
+        </div>
+
+    </body>
+        <script>
+            $(document).ready(function () {
+                $('.active').removeAttr("class");
+                $('li:contains("Control")').attr('class', 'active');
+            })
+    </script>
+</html>

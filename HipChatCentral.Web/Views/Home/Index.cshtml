@@ -1,0 +1,32 @@
+﻿<body>
+    @{
+        
+    }   
+    <div class="container-fluid">        
+        <div class="form-inline">
+            <form class="form-horizontal">
+                <legend>Login To Your HipChat Central Account</legend>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label">Username</label>
+                        <div class="controls">
+                            <input type="text" placeholder="Username" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Password</label>
+                        <div class="controls">
+                            <input type="password" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn">Sign In</button>                    
+                            @Html.ActionLink("Sign Up", "Index", "Registration",null, new {@class = "btn"} )
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>

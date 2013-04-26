@@ -1,0 +1,33 @@
+﻿@using HipChatCentral.Domain.Models.ViewModels
+@model HipChatCentral.Domain.Models.GroupAccount
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+            <div>            
+            @using (Html.BeginForm("Create", "Admin", FormMethod.Post, new {@class="form-horizontal"}))
+            {                                                
+                <fieldset>
+                    <div id="legend">
+                        <legend class="">Add A New HipChat Group</legend>
+                    </div>
+                    <div class="control-group">                        
+                        <label class="control-label">HipChat Group Name</label>
+                        <div class="controls">                            
+                            @Html.TextBoxFor(x => x.GroupName)
+                        </div>
+                        @Html.HiddenFor(x=>x.RegistrationId)
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="submit" value="Add Group" class="btn btn-primary"/>                            
+                        </div>
+                    </div>
+                </fieldset>
+            }          
+        </div>
+    </body>
+</html>

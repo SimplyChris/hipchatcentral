@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C0F728B-6161-43A9-8E60-03D66977DDE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HipChatCentral.Domain</RootNamespace>
+    <AssemblyName>HipChatCentral.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\DebugConstants.cs" />
+    <Compile Include="Data\Contexts\HipChatCentralContext.cs" />
+    <Compile Include="Interfaces\IHipChatCentralContext.cs" />
+    <Compile Include="Interfaces\ICustomLogger.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Migrations\201304182207045_InitialCreate.cs" />
+    <Compile Include="Migrations\201304182207045_InitialCreate.Designer.cs">
+      <DependentUpon>201304182207045_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304191752254_AddRegistrationId.cs" />
+    <Compile Include="Migrations\201304191752254_AddRegistrationId.Designer.cs">
+      <DependentUpon>201304191752254_AddRegistrationId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304201707117_AddApiKeyTable.cs" />
+    <Compile Include="Migrations\201304201707117_AddApiKeyTable.Designer.cs">
+      <DependentUpon>201304201707117_AddApiKeyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304201818197_AddApiKeyToGroups.cs" />
+    <Compile Include="Migrations\201304201818197_AddApiKeyToGroups.Designer.cs">
+      <DependentUpon>201304201818197_AddApiKeyToGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304201820136_RenameGroupIdKey.cs" />
+    <Compile Include="Migrations\201304201820136_RenameGroupIdKey.Designer.cs">
+      <DependentUpon>201304201820136_RenameGroupIdKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304201839083_RenameGroupIdKey1.cs" />
+    <Compile Include="Migrations\201304201839083_RenameGroupIdKey1.Designer.cs">
+      <DependentUpon>201304201839083_RenameGroupIdKey1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304210458299_AddKey.cs" />
+    <Compile Include="Migrations\201304210458299_AddKey.Designer.cs">
+      <DependentUpon>201304210458299_AddKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304210501190_AddKey1.cs" />
+    <Compile Include="Migrations\201304210501190_AddKey1.Designer.cs">
+      <DependentUpon>201304210501190_AddKey1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304211759347_AbstractApiKey.cs" />
+    <Compile Include="Migrations\201304211759347_AbstractApiKey.Designer.cs">
+      <DependentUpon>201304211759347_AbstractApiKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304211821383_AbstractApiKey1.cs" />
+    <Compile Include="Migrations\201304211821383_AbstractApiKey1.Designer.cs">
+      <DependentUpon>201304211821383_AbstractApiKey1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304211836101_AbstractApiKey_Remove.cs" />
+    <Compile Include="Migrations\201304211836101_AbstractApiKey_Remove.Designer.cs">
+      <DependentUpon>201304211836101_AbstractApiKey_Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Base\GroupAccountBase.cs" />
+    <Compile Include="Models\Base\HipChatApiKeyBase.cs" />
+    <Compile Include="Models\GroupAccount.cs" />
+    <Compile Include="Models\HipChatApiKey.cs" />
+    <Compile Include="Models\Registration.cs" />
+    <Compile Include="Models\ViewModels\CreateApiKeyViewModel.cs" />
+    <Compile Include="Models\ViewModels\EditApiKeyViewModel.cs" />
+    <Compile Include="Models\ViewModels\GroupAccountsViewModel.cs" />
+    <Compile Include="Models\ViewModels\GroupAccountViewModel.cs" />
+    <Compile Include="Models\ViewModels\GroupApiKeysViewModel.cs" />
+    <Compile Include="Models\ViewModels\ApiKeyListViewModel.cs" />
+    <Compile Include="Models\ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registries\DomainRegistry.cs" />
+    <Compile Include="Interfaces\ILogConfigurator.cs" />
+    <Compile Include="Services\Logging\Log4NetLogger.cs" />
+    <Compile Include="Services\Logging\Log4NetConfigurator.cs" />
+    <Compile Include="Services\Mappers.cs" />
+    <Compile Include="Services\Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201304182207045_InitialCreate.resx">
+      <DependentUpon>201304182207045_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304191752254_AddRegistrationId.resx">
+      <DependentUpon>201304191752254_AddRegistrationId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304201707117_AddApiKeyTable.resx">
+      <DependentUpon>201304201707117_AddApiKeyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304201818197_AddApiKeyToGroups.resx">
+      <DependentUpon>201304201818197_AddApiKeyToGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304201820136_RenameGroupIdKey.resx">
+      <DependentUpon>201304201820136_RenameGroupIdKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304201839083_RenameGroupIdKey1.resx">
+      <DependentUpon>201304201839083_RenameGroupIdKey1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304210458299_AddKey.resx">
+      <DependentUpon>201304210458299_AddKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304210501190_AddKey1.resx">
+      <DependentUpon>201304210501190_AddKey1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304211759347_AbstractApiKey.resx">
+      <DependentUpon>201304211759347_AbstractApiKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304211821383_AbstractApiKey1.resx">
+      <DependentUpon>201304211821383_AbstractApiKey1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304211836101_AbstractApiKey_Remove.resx">
+      <DependentUpon>201304211836101_AbstractApiKey_Remove.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

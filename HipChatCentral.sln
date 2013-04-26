@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChatCentral.Web", "HipChatCentral.Web\HipChatCentral.Web.csproj", "{0432984E-D1B7-441D-A5DA-1AD131DC284A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibHipChat", "LibHipChat", "{B4C7C5AB-449E-452E-8902-B8D33187E87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChatCentral.Domain", "HipChatCentral.Domain\HipChatCentral.Domain.csproj", "{8C0F728B-6161-43A9-8E60-03D66977DDE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0432984E-D1B7-441D-A5DA-1AD131DC284A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0432984E-D1B7-441D-A5DA-1AD131DC284A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0432984E-D1B7-441D-A5DA-1AD131DC284A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0432984E-D1B7-441D-A5DA-1AD131DC284A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C0F728B-6161-43A9-8E60-03D66977DDE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C0F728B-6161-43A9-8E60-03D66977DDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C0F728B-6161-43A9-8E60-03D66977DDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C0F728B-6161-43A9-8E60-03D66977DDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

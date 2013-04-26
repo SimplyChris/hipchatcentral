@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Status Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Status</title>
+</head>
+    <body>
+        <div class="container-fluid">
+            <p class="pull-left">
+                Test-Left Test Text        
+            </p>
+            <p class="pull-right">
+                Test-Right Test Text
+            </p>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $('.active').removeAttr("class");
+            $('li:contains("Status")').attr('class', 'active');
+        })
+    </script>
+</html>
